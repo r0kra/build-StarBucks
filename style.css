@@ -1,0 +1,421 @@
+/*
+Theme Name: CustomTheme
+Theme URI: https://wordpress.org/themes/CustomTheme/
+Author: the Rost team
+Author URI: http://rost.com.ua/
+Description: CustomTheme brings your site to life with immersive featured images and subtle animations. Our default theme works great in many languages, for any abilities, and on any device.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: CustomTheme
+Tags: custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../dev/assets/fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../dev/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../dev/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../dev/assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../dev/assets/fonts/Montserratt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat";
+  font-size: 16px;
+  background-color: #121517;
+  color: #D9D9D9;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 600;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.375rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a:hover {
+  color: #35C66B;
+}
+
+.container {
+  max-width: 1278px;
+  padding: 0px 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+::selection {
+  color: #121517;
+  background-color: #237249;
+}
+
+.btn.btn-outline {
+  width: 84px;
+  height: 84px;
+  border: 1.5px solid #237249;
+  border-radius: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.btn.btn-outline svg {
+  height: 37px;
+}
+
+.svg-sprite {
+  height: 0;
+}
+
+header {
+  position: relative;
+  padding: 48px 0;
+}
+header > .container {
+  display: flex;
+  align-items: center;
+  gap: 94px;
+}
+header .btn-burger {
+  margin-left: auto;
+}
+
+.menu__list {
+  display: flex;
+  gap: 94px;
+}
+.menu__link {
+  font-size: 20px;
+  color: #D9D9D9;
+  text-decoration: none;
+}
+
+.btn-burger {
+  z-index: 1;
+  width: 42px;
+  height: 20px;
+  position: relative;
+  background: none;
+  border: none;
+}
+.btn-burger span {
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(245deg, #237249 0%, #35c66b 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+.btn-burger span:nth-child(2) {
+  top: 9px;
+}
+.btn-burger span:last-child {
+  top: 17px;
+}
+.btn-burger.active span {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.btn-burger.active span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.btn-burger.active span:last-child {
+  opacity: 0;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #0B0C0D;
+  padding: 44px 0;
+  overflow: hidden;
+}
+.footer-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 116px;
+}
+.footer .container {
+  position: relative;
+  z-index: 1;
+}
+.footer__logo {
+  position: relative;
+}
+.footer__logo:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: center/contain no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-image: url("/dev/assets/img/decorate__footer-md.png");
+  width: 371px;
+  height: 260px;
+  transform: translate(-50%, -50%);
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 784px;
+  padding-top: 4px;
+  width: 100%;
+  position: relative;
+}
+.footer-nav__column {
+  padding: 0 12px;
+}
+.footer-nav__title {
+  color: #BBB3B3;
+  margin-bottom: 13px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.footer-nav__list {
+  margin-bottom: 12px;
+}
+.footer-nav__list:last-child {
+  margin-bottom: 0;
+}
+.footer-nav__link {
+  font-size: 20px;
+  font-weight: 400;
+  color: #575454;
+  text-decoration: none;
+}
+.footer-nav:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: center/contain no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-image: url("/dev/assets/img/decorate__footer-lg.png");
+  width: 1250px;
+  height: 906px;
+}
+.footer-contacts {
+  display: flex;
+  align-items: center;
+}
+.footer-social {
+  margin-left: auto;
+}
+.footer-social__item {
+  position: relative;
+  display: inline-block;
+}
+.footer-social__item:before {
+  position: absolute;
+  content: "";
+  left: -75px;
+  top: -40px;
+  background: center/contain no-repeat;
+  background-image: url("/dev/assets/img/decorate__footer-sm.png");
+  width: 168px;
+  height: 153px;
+}
+.footer-phones {
+  display: flex;
+  gap: 24px;
+}
+.footer-phones__item {
+  font-size: 26px;
+  font-weight: 500;
+  color: #35C66B;
+  text-decoration: none;
+  position: relative;
+}
+.footer-phones__item:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: center/contain no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-image: url("/dev/assets/img/decorate__footer-md.png");
+  width: 371px;
+  height: 260px;
+}
+
+@media (min-width: 1025px) {
+  .btn-burger {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-nav {
+    max-width: 650px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 38px 0;
+  }
+  header > .container {
+    gap: 0;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 98px;
+    width: 100%;
+    background-color: #121517;
+    z-index: 1;
+  }
+  .header-logo {
+    max-width: 114px;
+    z-index: 1;
+  }
+  .container {
+    padding: 0 25px;
+  }
+  .menu__list {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .mobile-container {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    background: rgba(11, 12, 13, 0.8196078431);
+    width: 100%;
+    padding: 25px 25px 75px;
+    background-image: linear-gradient(245deg, rgba(35, 114, 73, 0.32) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    backdrop-filter: blur(3px);
+    transition: 0.5s;
+    visibility: hidden;
+    transform: translate(0, -100%);
+  }
+  .mobile-container.show {
+    top: 98px;
+    transform: translate(0, 0);
+    visibility: visible;
+  }
+  .btn.btn-outline {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+  }
+  .btn.btn-outline svg {
+    height: 22px;
+  }
+  .footer {
+    padding: 37px 0 16px;
+  }
+  .footer__logo {
+    max-width: 135px;
+  }
+  .footer-nav {
+    max-width: 100%;
+    order: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    padding-top: 38px;
+  }
+  .footer-nav__column {
+    padding: 0;
+  }
+  .footer-nav__title, .footer-nav__link {
+    font-size: 15px;
+  }
+  .footer-row {
+    flex-wrap: wrap;
+    margin-bottom: 27px;
+  }
+  .footer-row .btn {
+    margin-left: auto;
+  }
+  .footer .btn {
+    margin-top: -17px;
+  }
+  .footer-phones__item {
+    font-size: 16px;
+  }
+  .footer-social__item {
+    width: 35px;
+    height: 35px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
