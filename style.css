@@ -14,35 +14,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @font-face {
   font-family: "Montserrat";
-  src: url("../dev/assets/fonts/Montserrat-Light.ttf") format("truetype");
+  src: url("./assets/fonts/Montserrat-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../dev/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../dev/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  src: url("./assets/fonts/Montserrat-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../dev/assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  src: url("./assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../dev/assets/fonts/Montserratt-ExtraBold.ttf") format("truetype");
+  src: url("./assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -224,7 +224,7 @@ header .btn-burger {
   background: center/contain no-repeat;
   transform: translate(-50%, -50%);
   z-index: -1;
-  background-image: url("/dev/assets/img/decorate__footer-md.png");
+  background-image: url("./assets/img/decorate__footer-md.png");
   width: 371px;
   height: 260px;
   transform: translate(-50%, -50%);
@@ -267,7 +267,7 @@ header .btn-burger {
   background: center/contain no-repeat;
   transform: translate(-50%, -50%);
   z-index: -1;
-  background-image: url("/dev/assets/img/decorate__footer-lg.png");
+  background-image: url("./assets/img/decorate__footer-lg.png");
   width: 1250px;
   height: 906px;
 }
@@ -288,7 +288,7 @@ header .btn-burger {
   left: -75px;
   top: -40px;
   background: center/contain no-repeat;
-  background-image: url("/dev/assets/img/decorate__footer-sm.png");
+  background-image: url("./assets/img/decorate__footer-sm.png");
   width: 168px;
   height: 153px;
 }
@@ -311,7 +311,7 @@ header .btn-burger {
   background: center/contain no-repeat;
   transform: translate(-50%, -50%);
   z-index: -1;
-  background-image: url("/dev/assets/img/decorate__footer-md.png");
+  background-image: url("./assets/img/decorate__footer-md.png");
   width: 371px;
   height: 260px;
 }
