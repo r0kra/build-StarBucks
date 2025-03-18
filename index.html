@@ -12,12 +12,14 @@
 </head>
 
 <body>
+    <div class="overlay">
 
+    </div>
     <header id="header">
         <div class="container">
             <a href="index.html" class="header-logo">
-            <img src="./assets/img/starbucks.svg" alt="logo">
-        </a>
+                <img src="./assets/img/starbucks.svg" alt="logo">
+            </a>
 
             <div id="mobile-container" class="mobile-container">
                 <nav class="menu">
@@ -35,38 +37,100 @@
             </button>
         </div>
     </header>
-
-
     <main class="wrapper home">
         <section class="banner">
             <div class="container">
                 <div class="banner-content">
-                    <h1>New Cafe by <span class="gradient">StarBucks</span></h1>
-                    <p class="banner-description">Have time to buy the most harmonious drinks in the
-                        new Starbucks coffee and don't forget about the discount!</p>
+                    <h1 class="template-title">New Cafe by <span class="gradient-text">StarBucks</span></h1>
+                    <h6 class="template-description">Have time to buy the most harmonious drinks in the
+                        new Starbucks coffee and don't forget about the discount!</h6>
                     <div class="banner-btn-group">
                         <a href="#" class="btn btn-primary">Select a coffee</a>
                         <a href="#" class="btn btn-secondary">More</a>
                     </div>
                     <ul class="banner-statistics">
                         <li class="banner-statistic-item">
-                            <div class="banner-statistic__title">9k+</div>
+                            <div class="banner-statistic__title">9k<span class="gradient-text">+</span></div>
                             <div class="banner-statistic__description">Premium Users</div>
                         </li>
                         <li class="banner-statistic-item">
-                            <div class="banner-statistic__title">2k+</div>
+                            <div class="banner-statistic__title">2k<span class="gradient-text">+</span></div>
                             <div class="banner-statistic__description">Happy Customers</div>
                         </li>
                         <li class="banner-statistic-item">
-                            <div class="banner-statistic__title">28+</div>
+                            <div class="banner-statistic__title">28<span class="gradient-text">+</span></div>
                             <div class="banner-statistic__description">Awards Winnings</div>
                         </li>
                     </ul>
                 </div>
                 <div class="banner-img">
-                    <div class="banner-discount">45%</div>
+                    <div class="accent-label"><span class="accent-label__number">45%</span></div>
                     <img src="./assets/img/first-screen__cup.png" alt="cup">
+                    <svg class="banner-line" viewBox="0 0 1078 677" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 624L139.579 538.327C177.975 514.589 196.674 468.793 185.865 424.965L178.606 395.53C166.875 347.962 189.935 298.657 233.963 277.167L250.481 269.104C272.455 258.379 289.948 240.254 299.886 217.913L313.814 186.602C333.295 142.809 380.182 118.002 427.347 126.532L558.592 150.27C603.673 158.424 648.781 136.118 669.666 95.3421L683.838 67.6738C704.482 27.3693 748.752 5.47909 792.774 16.0958C803.5 18.6827 815.405 21.6378 828.5 25C902.5 44 1071 74.5 1071 74.5" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                        <path d="M25 650L163.579 564.327C201.975 540.589 220.674 494.793 209.865 450.965L202.606 421.53C190.875 373.962 213.935 324.657 257.963 303.167L274.481 295.104C296.455 284.379 313.948 266.254 323.886 243.913L337.814 212.602C357.295 168.809 404.182 144.002 451.347 152.532L582.592 176.27C627.673 184.424 672.781 162.118 693.666 121.342L708.491 92.3979C728.819 52.71 772.194 30.3735 815.878 39.3186C828.888 41.9824 843.083 45.0436 858 48.5C922.5 63.4451 1073 89 1073 89" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                        <path d="M49 676L187.579 590.327C225.975 566.589 244.674 520.793 233.865 476.965L226.606 447.53C214.875 399.962 237.935 350.657 281.963 329.167L298.481 321.104C320.455 310.379 337.948 292.254 347.886 269.913L361.814 238.602C381.295 194.809 428.182 170.002 475.347 178.532L606.592 202.271C651.673 210.424 696.781 188.118 717.666 147.342L738.539 106.59C755.791 72.9075 790.03 52.5558 827.398 58.5451C843.8 61.1742 863.986 64.8533 888.5 70C979 89 1077 103.5 1077 103.5" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                    </svg>
                 </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <div class="advantages-row white-wrapper">
+                    <div class="accent-label-sm">we have</div>
+                    <div class="advantage">
+                        <div class="advantage__img-box">
+                            <img src="./assets/img/advantage-1.png" alt="advantage">
+                        </div>
+                        <h3 class="advantage__title">Tasty</h3>
+                        <h6 class="advantage__description">We have the most delicious coffee</h6>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__img-box">
+                            <img src="./assets/img/advantage-2.png" alt="advantage">
+                        </div>
+                        <h3 class="advantage__title">Fast</h3>
+                        <h6 class="advantage__description">Our cafe will serve you quickly</h6>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__img-box">
+                            <img src="./assets/img/advantage-3.png" alt="advantage">
+                        </div>
+                        <h3 class="advantage__title">Available</h3>
+                        <h6 class="advantage__description">Cafe will serveat the most pleasant prices</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="we-make">
+            <div class="container">
+                <div class="we-make__img-box">
+                    <div class="accent-label-sm">we have</div>
+                    <img src="./assets/img/we-make.png" alt="we-make">
+                </div>
+                <div class="we-make__content-box">
+                    <h2 class="template-title">
+                        We make <span class="gradient-text">delicious</span>
+                    </h2>
+                    <div class="template-description">
+                        <h6>Only in 2021 we have made more than 100,000 orders for you, your loved ones, all of you, and in 2022 we are ready to destroy the market</h6>
+                    </div>
+                    <div class="we-make__process">
+                        <a href="#" data-triger-modal="process" class="btn btn-primary">
+                            <svg>
+                                <use href="#icon-triangl"></use>
+                            </svg>
+                            Cooking Process
+                        </a>
+
+                        <img src="./assets/img/we-make__cooking.png" alt="cooking-img">
+                    </div>
+                </div>
+                <svg class="we-make__line" viewBox="0 0 993 999" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1208.47 586.034L1027.12 560.828C978.488 554.068 941.208 514.215 937.705 465.239L936.61 449.929C932.85 397.372 890.379 355.932 837.746 353.463L809.009 352.116C784.66 350.974 761.486 341.316 743.533 324.828L709.96 293.995C677.023 263.746 628.437 257.939 589.3 279.573L420.25 373.019C383.106 393.551 337.212 389.452 304.293 362.664L265.984 331.489C232.679 304.386 186.14 300.538 148.836 321.804L62.1984 371.192" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                    <path d="M1191.19 620.036L1009.85 594.83C961.214 588.07 923.934 548.217 920.431 499.241L919.336 483.931C915.577 431.374 873.106 389.934 820.473 387.465L791.735 386.118C767.386 384.976 744.212 375.318 726.259 358.83L692.686 327.997C659.75 297.748 611.164 291.941 572.026 313.575L402.976 407.021C365.832 427.553 319.938 423.455 287.02 396.666L248.711 365.491C215.405 338.388 168.867 334.54 131.562 355.806L44.9247 405.194" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                    <path d="M1173.92 654.038L992.575 628.832C943.941 622.072 906.661 582.219 903.157 533.243L902.062 517.933C898.303 465.376 855.832 423.936 803.199 421.468L774.461 420.12C750.113 418.978 726.939 409.32 708.986 392.832L675.412 361.999C642.476 331.75 593.89 325.943 554.752 347.577L385.702 441.023C348.558 461.555 302.664 457.457 269.746 430.668L231.437 399.493C198.131 372.39 151.593 368.542 114.288 389.808L27.651 439.196" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                </svg>
             </div>
         </section>
     </main>
@@ -74,10 +138,10 @@
         <div class="container">
             <div class="footer-row">
                 <a href="index.html" class="footer__logo">
-				<img src="./assets/img/starbucks.svg" alt="footer-logo">
-				
+                    <img src="./assets/img/starbucks.svg" alt="footer-logo">
 
-			</a>
+
+                </a>
 
                 <nav class="footer-nav">
                     <div class="footer-nav__column">
@@ -139,10 +203,10 @@
                 </nav>
 
                 <a href="#header" class="btn btn-outline">
-				<svg>
-					<use href="#icon-arrow"></use>
-				</svg>
-			</a>
+                    <svg>
+                        <use href="#icon-arrow"></use>
+                    </svg>
+                </a>
             </div>
 
             <address class="footer-contacts">
@@ -152,8 +216,8 @@
 
                 <nav class="footer-social">
                     <a href="#" class="footer-social__item">
-					<img src="./assets/img/icon-instagram.svg" alt="instagram">
-				</a>
+                        <img src="./assets/img/icon-instagram.svg" alt="instagram">
+                    </a>
                 </nav>
             </address>
         </div>
@@ -172,6 +236,13 @@
             <path d="M17.3596 11.071C17.6841 11.265 17.6841 11.7352 17.3596 11.9293L2.25661 20.9604C1.92333 21.1597 1.5 20.9196 1.5 20.5313L1.5 2.46899C1.5 2.08067 1.92333 1.84057 2.25661 2.03986L17.3596 11.071Z" stroke="white" stroke-width="3" stroke-miterlimit="1.55572" />
         </symbol>
     </svg>
+    <div class="modal">
+        <h3>Process modal window</h3>
+        <div class="modal-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eum asperiores quod recusandae itaque sint perspiciatis veniam molestiae facere, magni dolor sed nesciunt, expedita dolorem voluptates adipisci sequi numquam iure.
+        </div>
+        <button class="btn btn-secondary" data-modal="close" type="button">Close</button>
+    </div>
     <script src="assets/js/custom.js"></script>
 </body>
 
