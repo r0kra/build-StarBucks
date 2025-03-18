@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: $font-primary;
+    font-size: $font-size;
+    background-color: $bg-color;
+    color: $text;
+    scroll-behavior: smooth;
+}
+
+body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+   font-size: 600;
+   margin-bottom: .5em;
+   color: $title-color;
+}
+
+h1{
+    font-size: 5rem;
+    line-height: 1.1;
+}
+
+h2{
+    font-size: 3.875rem;
+    line-height: 1.1;
+}
+
+h3{
+    font-size: 2rem;
+    line-height: 1.32;
+}
+
+h4{
+   font-size: 1.625rem;
+   line-height: 1.23;
+}
+
+h5{
+   font-size: 1.5rem;
+   line-height: 1.46;
+}
+
+h6{
+   font-size: 1.25rem;
+   line-height: 1.62;
+}
+
+p{
+    font-size: 1rem;
+}
+
+img{
+   height: auto;
+   max-width: 100%;
+}
+
+a{
+   &:hover{
+       color: $secondary-color;
+   }
+}
+
+button{
+   cursor: pointer;
+}
+
+section{
+   margin-bottom: $section-margin;
+}
+
+.template-title{
+   font-size: min(6vw,80px);
+   font-weight: 800;
+   position: relative;
+   letter-spacing: -0.03em;
+}
+
+.template-description{
+   @extend h6;
+   color: $text;
+   font-weight: 400;
+   margin-bottom: 54px;
+   max-width: 480px;
+   letter-spacing: -0.02em;
+}
+
+.container{
+   max-width: 1278px;
+   padding: 0px 12px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.overflow-hidden{
+   overflow: hidden;
+}
+
+::selection{
+   color:$bg-color;
+   background-color: $primary-color;
+}
+
+.btn{
+   &.btn-outline{
+       width: 84px;
+       height: 84px;
+       border: 1.5px solid $primary-color;
+       border-radius: 29px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       z-index: 1;
+       padding: 0;
+
+       svg {
+           height: 37px;
+       }
+   }
+}
+
+.svg-sprite {
+   height: 0;
+}
+
+.gradient-text{
+   background-clip: text;
+   color: transparent;
+   background-image: linear-gradient(223deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.gradient-background{
+   background-image: linear-gradient(245deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.btn{
+   font-size: 24px;
+   padding: 25px 54px;
+   display: inline-flex;
+   border-radius: 83px;
+   border: none;
+   text-decoration: none;
+   text-align: center;
+   background: transparent;
+   color: $title-color;
+   transition: .3s;
+   position: relative;
+
+   &::after{
+       @include template-light;
+       background-image: url("./assets/img/btn-hover-primary.svg");
+       width: 0;
+       height: 0;
+   }
+
+   &:hover {
+       color: #fff;
+       &::after{
+           width: 500%;
+           height: 500%;
+           transition: .5s;
+       }
+   }
+
+   svg{
+       --size: 28px;
+       height: var(--size);
+       width: var(--size);
+   }
+
+   &.btn-primary{
+       font-weight: 600;
+       background-image: linear-gradient(210deg, $primary-color 0%, $secondary-color 100%);
+   }
+
+   &.btn-secondary{
+       position: relative;
+       background-color: $bg-color;
+
+       &::before {
+           content: "";
+           position: absolute;
+           inset: -2px;
+           background-image: linear-gradient(140deg, #BBB3B3 0%, #121517 100%);
+           z-index: -1;
+           border-radius: 40px;
+       }
+
+       &::after {
+           background-image: url("./assets/img/btn-hover-secondary.svg");
+       }
+   }
+}
+
+.accent-label{
+   --size: 14.154vw;
+   --max-size: 167px;
+   position: absolute;
+   width: var(--size);
+   height: var(--size);
+   max-width: var(--max-size);
+   max-height: var(--max-size);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   border-radius: 50%;
+   font-weight: 500;
+   text-transform: uppercase;
+   box-shadow: -4.56px 15.52px 26.48px #143e287a;
+   z-index: 1;
+   
+   &::before{
+       position: absolute;
+       content: "";
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       width: calc(100% + 20px);
+       height: calc(100% + 20px);
+       border-radius: 50%;
+       z-index: -1;
+       background: url("./assets/img/bg-discount.svg") center/100% no-repeat;
+   }
+
+   &__number{
+       font-size: min(4.231vw,55px);
+       transform: rotate(-12deg);
+   }
+}
+
+.accent-label-sm{
+   @extend .accent-label;
+   font-size: min(4.231vw,32px);
+   --max-size: 113px;
+}
+
+.white-wrapper{
+   background:  linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+
+   h1,h2,h3,h4,h5,h6{
+       color: #121517;
+   }
+
+   p{
+       color: #292c2d;
+   }
+}
