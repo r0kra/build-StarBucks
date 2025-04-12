@@ -8,13 +8,13 @@
     <title>StarBucks</title>
     <link rel="icon" href="./assets/img/sfavicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/css/reset.min.css" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="overlay">
+    <div class="overlay" data-modal-close></div>
 
-    </div>
     <header id="header">
         <div class="container">
             <a href="index.html" class="header-logo">
@@ -29,6 +29,8 @@
                         <li class="menu__item"><a class="menu__link" href="#">Shop</a></li>
                     </ul>
                 </nav>
+
+                <a href="#" class="btn btn-secondary" data-triger-modal="feedback">feedback</a>
             </div>
             <button id="btn-burger" class="btn btn-burger">
                 <span></span>
@@ -37,6 +39,7 @@
             </button>
         </div>
     </header>
+
     <main class="wrapper home">
         <section class="banner">
             <div class="container">
@@ -126,10 +129,172 @@
                         <img src="./assets/img/we-make__cooking.png" alt="cooking-img">
                     </div>
                 </div>
-                <svg class="we-make__line" viewBox="0 0 993 999" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1208.47 586.034L1027.12 560.828C978.488 554.068 941.208 514.215 937.705 465.239L936.61 449.929C932.85 397.372 890.379 355.932 837.746 353.463L809.009 352.116C784.66 350.974 761.486 341.316 743.533 324.828L709.96 293.995C677.023 263.746 628.437 257.939 589.3 279.573L420.25 373.019C383.106 393.551 337.212 389.452 304.293 362.664L265.984 331.489C232.679 304.386 186.14 300.538 148.836 321.804L62.1984 371.192" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
-                    <path d="M1191.19 620.036L1009.85 594.83C961.214 588.07 923.934 548.217 920.431 499.241L919.336 483.931C915.577 431.374 873.106 389.934 820.473 387.465L791.735 386.118C767.386 384.976 744.212 375.318 726.259 358.83L692.686 327.997C659.75 297.748 611.164 291.941 572.026 313.575L402.976 407.021C365.832 427.553 319.938 423.455 287.02 396.666L248.711 365.491C215.405 338.388 168.867 334.54 131.562 355.806L44.9247 405.194" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
-                    <path d="M1173.92 654.038L992.575 628.832C943.941 622.072 906.661 582.219 903.157 533.243L902.062 517.933C898.303 465.376 855.832 423.936 803.199 421.468L774.461 420.12C750.113 418.978 726.939 409.32 708.986 392.832L675.412 361.999C642.476 331.75 593.89 325.943 554.752 347.577L385.702 441.023C348.558 461.555 302.664 457.457 269.746 430.668L231.437 399.493C198.131 372.39 151.593 368.542 114.288 389.808L27.651 439.196" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+
+                <svg class="we-make__line" width="552" height="449" viewBox="0 0 552 449" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.02957 263.452L89.5532 252.121C111.417 249.082 128.176 231.166 129.751 209.149L130.243 202.266C131.933 178.639 151.026 160.009 174.687 158.9L187.606 158.294C198.552 157.781 208.97 153.439 217.041 146.027L232.134 132.166C246.94 118.567 268.782 115.957 286.377 125.682L362.373 167.691C379.071 176.921 399.703 175.079 414.502 163.036L431.724 149.021C446.696 136.837 467.618 135.107 484.388 144.667L523.336 166.87" stroke="#D9D9D9" stroke-width="0.629372" stroke-linejoin="round" />
+                    <path d="M15.7949 278.738L97.3186 267.406C119.182 264.367 135.941 246.451 137.516 224.434L138.008 217.552C139.699 193.925 158.791 175.295 182.453 174.185L195.372 173.58C206.318 173.066 216.735 168.724 224.806 161.312L239.899 147.451C254.706 133.853 276.548 131.242 294.142 140.968L370.139 182.976C386.837 192.207 407.468 190.364 422.267 178.322L431.052 171.172L439.489 164.307C454.461 152.123 475.383 150.393 492.153 159.953L531.101 182.155" stroke="#D9D9D9" stroke-width="0.629372" stroke-linejoin="round" />
+                    <path d="M23.5603 294.024L105.084 282.692C126.947 279.653 143.707 261.737 145.282 239.72L145.774 232.837C147.464 209.21 166.557 190.581 190.218 189.471L203.137 188.865C214.083 188.352 224.501 184.01 232.572 176.598L247.665 162.737C262.471 149.139 284.313 146.528 301.907 156.254L377.904 198.262C394.602 207.492 415.234 205.65 430.032 193.607L447.254 179.593C462.227 167.408 483.148 165.679 499.919 175.239L538.866 197.441" stroke="#D9D9D9" stroke-width="0.629372" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                <div class="products-title-wrapper">
+                    <h2 class="template-title">New Our <span class="gradient-text">Products</span></h2>
+                    <h6 class="template-description">Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount! Starbucks coffee and don't forget about the discount!</h6>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="swiper swiper-product">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="./assets/img/product-1.png" alt="starbuks-cup">
+                                </div>
+                                <h3 class="product-title">Espresso</h3>
+                                <h6 class="product-description">Our cafe will serve you quickly</h6>
+                                <div class="product-value">
+                                    <div class="product-price">7,45$</div>
+                                    <div class="product-volume">110ml</div>
+                                </div>
+                                <a href="" class="btn btn-primary">Buy Product</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="./assets/img/product-2.png" alt="starbuks-cup">
+                                </div>
+                                <h3 class="product-title">Latte</h3>
+                                <h6 class="product-description">Our cafe will serve you quickly</h6>
+                                <div class="product-value">
+                                    <div class="product-price">8,25$</div>
+                                    <div class="product-volume">350ml</div>
+                                </div>
+                                <a href="#" class="btn btn-primary">Buy Product</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="./assets/img/product-3.png" alt="starbuks-cup">
+                                </div>
+                                <h3 class="product-title">Flat White</h3>
+                                <h6 class="product-description">Our cafe will serve you quickly</h6>
+                                <div class="product-value">
+                                    <div class="product-price">9,50$</div>
+                                    <div class="product-volume">330ml</div>
+                                </div>
+                                <a href="#" class="btn btn-primary">Buy Product</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="./assets/img/product-4.png" alt="starbuks-cup">
+                                </div>
+                                <h3 class="product-title">Cappuccino</h3>
+                                <h6 class="product-description">Our cafe will serve you quickly</h6>
+                                <div class="product-value">
+                                    <div class="product-price">8,25$</div>
+                                    <div class="product-volume">350ml</div>
+                                </div>
+                                <a href="#" class="btn btn-primary">Buy Product</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="./assets/img/product-2.png" alt="starbuks-cup">
+                                </div>
+                                <h3 class="product-title">Fast</h3>
+                                <h6 class="product-description">Our cafe will serve you quickly</h6>
+                                <div class="product-value">
+                                    <div class="product-price">7,45$</div>
+                                    <div class="product-volume">110ml</div>
+                                </div>
+                                <a href="#" class="btn btn-primary">Buy Product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-navigation">
+                    <div class="swiper-button-prev btn btn-outline">
+                        <svg>
+                            <use href="#icon-arrow"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next btn btn-outline">
+                        <svg>
+                            <use href="#icon-arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="events">
+            <div class="container">
+                <div class="events-title-wrapper">
+                    <h2 class="template-title">Our New <span class="gradient-text">Events</span></h2>
+                    <h6 class="template-description">Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount! Starbucks coffee and don't forget about the discount!</h6>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="swiper swiper-events">
+                        <div class="events-grid swiper-wrapper">
+                            <div class="swiper-slide events-area-1">
+                                <div class="event-item" style="background-image: url(./assets/img/events-1.png)">
+                                    <h3 class="event-title">TWO COFFEE FOR 1 PRICE</h3>
+                                    <a href="#" class="btn btn-primary">More</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide events-area-2">
+                                <div class="event-item" style="background-image: url(./assets/img/events-2.png)">
+                                    <h3 class="event-title">KITCHEN TOUR</h3>
+                                    <a href="#" class="btn btn-primary">More</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide events-area-3">
+                                <div class="event-item" style="background-image: url(./assets/img/events-3.png)">
+                                    <h3 class="event-title">FREE COFFEE FOR 3 COFFEE</h3>
+                                    <a href="#" class="btn btn-primary">More</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide events-area-4">
+                                <div class="event-item" style="background-image: url(./assets/img/events-4.png)">
+                                    <h3 class="event-title">OUR INSTAGRAM</h3>
+                                    <a href="#" class="btn btn-primary">More</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide events-area-5">
+                                <div class="event-item" style="background-image: url(./assets/img/events-5.png)">
+                                    <h3 class="event-title">WHERE ARE YOU CHOOSE US?</h3>
+                                    <a href="#" class="btn btn-primary">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-event-navigation">
+                    <div class="swiper-event-button-prev btn btn-outline">
+                        <svg>
+                            <use href="#icon-arrow"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-event-button-next btn btn-outline">
+                        <svg>
+                            <use href="#icon-arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <svg class="events__line" width="735" height="318" viewBox="0 0 735 318" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M60.7569 29.4986L159.37 14.645C201.831 8.24927 243.857 28.6071 265.16 65.8903L289.663 108.775C310.718 145.625 352.053 165.984 394.1 160.215L585.465 133.957C629.769 127.878 672.999 150.802 692.824 190.886L729.758 265.564" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                    <path d="M32.3921 54.9928L131.005 40.1391C173.466 33.7434 215.493 54.1012 236.795 91.3845L261.298 134.269C282.353 171.119 323.688 191.478 365.735 185.709L557.1 159.452C601.404 153.373 644.634 176.296 664.459 216.38L701.393 291.058" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
+                    <path d="M4.02707 80.4872L102.64 65.6335C145.101 59.2378 187.128 79.5956 208.43 116.879L232.933 159.763C253.988 196.613 295.323 216.972 337.37 211.203L528.735 184.946C573.039 178.867 616.269 201.79 636.094 241.875L673.028 316.553" stroke="#D9D9D9" stroke-width="1.4" stroke-linejoin="round" />
                 </svg>
             </div>
         </section>
@@ -209,7 +374,7 @@
                 </a>
             </div>
 
-            <address class="footer-contacts">
+            <address class="footer-contacts  g-3">
                 <nav class="footer-phones">
                     <a href="tel:+390999999999" class="footer-phones__item">+3-999-999-99-99</a>
                 </nav>
@@ -232,18 +397,102 @@
                 </linearGradient>
             </defs>
         </symbol>
-        <symbol id="icon-triangl" width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.3596 11.071C17.6841 11.265 17.6841 11.7352 17.3596 11.9293L2.25661 20.9604C1.92333 21.1597 1.5 20.9196 1.5 20.5313L1.5 2.46899C1.5 2.08067 1.92333 1.84057 2.25661 2.03986L17.3596 11.071Z" stroke="white" stroke-width="3" stroke-miterlimit="1.55572" />
+
+        <symbol id="icon-triangl" width="28" height="28" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 4.45705V19.6911C2 21.1952 3.59793 22.1611 4.92967 21.4619L18.7788 14.1911C20.1752 13.458 20.2133 11.4726 18.8461 10.6865L4.99694 2.72324C3.66361 1.95658 2 2.91902 2 4.45705Z" stroke="white" stroke-width="3" />
+        </symbol>
+        <symbol id="icon-pause" width="28" height="28" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 19.8739V4.04094C2 2.92051 2.92032 2.01865 4.04052 2.04135L8.21664 2.12597C9.29759 2.14787 10.1654 3.02486 10.176 4.10598L10.3311 19.94C10.3421 21.0677 9.41911 21.9816 8.29159 21.9592L3.96042 21.8735C2.87149 21.852 2 20.963 2 19.8739Z" stroke="white" stroke-width="3" />
+            <path d="M15.9836 19.8739V4.04094C15.9836 2.92051 16.904 2.01865 18.0242 2.04135L22.2003 2.12597C23.2812 2.14787 24.1491 3.02486 24.1597 4.10598L24.3147 19.94C24.3258 21.0677 23.4028 21.9816 22.2752 21.9592L17.9441 21.8735C16.8551 21.852 15.9836 20.963 15.9836 19.8739Z" stroke="white" stroke-width="3" />
+        </symbol>
+        <symbol id="icon-stop" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 20V4C2 2.89543 2.89543 2 4 2H20C21.1046 2 22 2.89543 22 4V20C22 21.1046 21.1046 22 20 22H4C2.89543 22 2 21.1046 2 20Z" stroke="white" stroke-width="3" />
         </symbol>
     </svg>
-    <div class="modal">
-        <h3>Process modal window</h3>
+    <div id="process" class="modal video-procecess">
+        <button class="btn btn-close x-close" data-modal-close>x</button>
+        <div class="modal-content video-content">
+            <h3>Process modal window</h3>
+            <video id="video" src="/dev/assets/video/starbucks-coffee.mp4.mp4" controls></video>
+            <div class="player-controls">
+                <div class="d-flex g-3">
+                    <button id="play" class="btn btn-player">
+                        <svg>
+                            <use href="#icon-triangl"></use>
+                        </svg>
+                    </button>
+                    <button id="pause" class="btn btn-player">
+                        <svg>
+                            <use href="#icon-pause"></use>
+                        </svg>
+                    </button>
+                    <button id="stop" class="btn btn-player">
+                        <svg>
+                            <use href="#icon-stop"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="d-flex g-3">
+                    <h5 id="how-made" class="btn btn-player">How is made</h5>
+                    <h5 id="roaster" class="btn btn-player">The roaster</h5>
+                    <h5 id="taste" class="btn btn-player">Taste</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="feedback" class="modal">
+        <button class="btn btn-close x-close" data-modal-close>x</button>
         <div class="modal-content">
+            <h3>Feedback modal window</h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eum asperiores quod recusandae itaque sint perspiciatis veniam molestiae facere, magni dolor sed nesciunt, expedita dolorem voluptates adipisci sequi numquam iure.
         </div>
-        <button class="btn btn-secondary" data-modal="close" type="button">Close</button>
+        <button class="btn btn-close" data-modal-close type="button">Close</button>
     </div>
+
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
 
 </html>
+<div id="process" class="modal video-procecess">
+    <button class="btn btn-close x-close" data-modal-close>x</button>
+    <div class="modal-content video-content">
+        <h3>Process modal window</h3>
+        <video id="video" src="/dev/assets/video/starbucks-coffee.mp4.mp4" controls></video>
+        <div class="player-controls">
+            <div class="d-flex g-3">
+                <button id="play" class="btn btn-player">
+                    <svg>
+                        <use href="#icon-triangl"></use>
+                    </svg>
+                </button>
+                <button id="pause" class="btn btn-player">
+                    <svg>
+                        <use href="#icon-pause"></use>
+                    </svg>
+                </button>
+                <button id="stop" class="btn btn-player">
+                    <svg>
+                        <use href="#icon-stop"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="d-flex g-3">
+                <h5 id="how-made" class="btn btn-player">How is made</h5>
+                <h5 id="roaster" class="btn btn-player">The roaster</h5>
+                <h5 id="taste" class="btn btn-player">Taste</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="feedback" class="modal">
+    <button class="btn btn-close x-close" data-modal-close>x</button>
+    <div class="modal-content">
+        <h3>Feedback modal window</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eum asperiores quod recusandae itaque sint perspiciatis veniam molestiae facere, magni dolor sed nesciunt, expedita dolorem voluptates adipisci sequi numquam iure.
+    </div>
+    <button class="btn btn-close" data-modal-close type="button">Close</button>
+</div>
