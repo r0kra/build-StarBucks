@@ -1,0 +1,148 @@
+.events{
+    .container{
+        position: relative;
+    }
+
+    &__line{
+        position: absolute;
+        top: -5px;
+        left: -364px;
+        z-index: -1;
+    }
+}
+
+.events-title-wrapper{
+    @extend .products-title-wrapper;
+    flex-direction: row-reverse;
+
+    .template-title{
+        margin-right: 0;
+        margin-left:  var(--margin);
+    }
+}
+
+.event-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 260px;
+    border-radius: 30px;
+    padding: 44px 26px 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .btn{
+        font-weight: 600;
+        padding: 25px 52px;
+    }
+}
+
+.event-title{
+    font-weight: 500;
+    line-height: 1;
+}
+    
+.events-area-1 { 
+    grid-area: 1 / 1 / 4 / 7;
+}
+
+.events-area-1::before{
+    --size: 500px;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-110%, -50%);
+    width: var(--size);
+    height: var(--size);
+    background: center / contain no-repeat;
+    background-image: url('./assets/img/decorate-events-accent.png');
+}
+
+.events-area-2 { 
+    grid-area: 1 / 7 / 4 / 13; 
+}
+
+.events-area-2::before{
+    --size: 500px;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-95%, -68%);
+    width: var(--size);
+    height: var(--size);
+    background: center / contain no-repeat;
+    background-image: url('./assets/img/decorate-events-accent.png');
+}
+
+.events-area-3 { 
+    grid-area: 4 / 1 / 7 / 5; 
+}
+
+.events-area-3::before{
+    --size: 500px;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-8%, -34%);
+    width: var(--size);
+    height: var(--size);
+    background: center / contain no-repeat;
+    background-image: url('./assets/img/decorate-events-light.png');
+}
+
+.events-area-4 { 
+    grid-area: 4 / 5 / 7 / 9; 
+}
+
+.events-area-4::before{
+    --size: 500px;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-8%, -60%);
+    width: var(--size);
+    height: var(--size);
+    background: center / contain no-repeat;
+    background-image: url('./assets/img/decorate-events-light.png');
+}
+
+.events-area-5 { 
+    grid-area: 4 / 9 / 7 / 13; 
+}
+
+.events-area-5::before{
+    --size: 500px;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-18%, -72%);
+    width: var(--size);
+    height: var(--size);
+    background: center / contain no-repeat;
+    background-image: url('./assets/img/decorate-events-accent.png');
+}
+
+.swiper-event-navigation{
+    @extend .swiper-navigation;
+}
+
+.swiper-event-button-prev{
+    @extend .swiper-button-prev;
+}
+
+.swiper-event-button-next{
+    @extend .swiper-button-next;
+}

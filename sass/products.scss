@@ -1,0 +1,113 @@
+.products-title-wrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+
+    .template-title{
+        --margin: 72px;
+        max-width: 392px;
+        margin-right: var(--margin);
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .template-description{
+        margin-bottom: 0;
+    }
+}
+
+.swiper-slide-active{
+    .product{
+        border: 1px solid $secondary-color;
+    }
+}
+
+.carousel-wrapper {
+    position: relative;
+    .swiper-product {
+        max-width: 1252px;
+        margin: 0 auto;
+    }
+}
+
+.swiper-navigation {
+    height: 0;
+    width: 100%;
+    max-width: 1492px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    @include transform-centered;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+        transform: rotate(-90deg);
+    }
+}
+
+.product{
+    border: 1px solid #D9D9D9;
+    border-radius: 29px;
+    padding: 48px 30px 32px;
+    text-align: center;
+
+    &-img{
+        position: relative;
+        --size: 186px;
+        height: var(--size);
+        width: var(--size);
+        border-radius: 50%;
+        background-image: linear-gradient(210deg, $primary-color 0%, $secondary-color 100%);
+        margin-bottom: 36px;
+
+        img{
+            position: absolute;
+            height: 241px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-title{
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    &-description{
+        font-weight: 400;
+        color: $text;
+        margin-bottom: 8px;
+    }
+
+    &-value{
+        display: flex;
+        gap: 35px;
+        align-items: flex-end;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &-price{
+        font-weight: 500;
+        font-size: 32px;
+        color: $title-color;
+    }
+
+    &-volume{
+        font-size: 20px;
+    }
+    
+    .btn{
+        display: inline;
+        padding: 14px 38px;
+        font-size: 17px;
+        font-weight: 600; 
+    } 
+    
+}

@@ -1,0 +1,53 @@
+@media screen and (max-width: 767.99px) {
+    .banner{
+        .banner-line{
+            left: 5vw;
+            bottom: -30vw;
+        }
+    }
+
+    .accent-label-sm{
+        --size: 13.3vw;
+        font-size: 18px;
+    }
+
+    
+    .modal{
+        .modal-content{
+            h3{
+                font-size: 24px;
+            }
+
+            h5{
+                font-size: 14px;
+            }
+        }
+    }
+
+    .carousel-wrapper {
+        .swiper-product {
+            max-width: 184px;
+        }
+    }
+
+    .swiper-navigation {
+        max-width: 336px;
+    }
+
+    .events{
+        .carousel-wrapper{
+            max-width: 184px;
+        }
+
+        .event-title{
+            font-size: 18px;
+        }
+
+        .event-item{
+            .btn{
+                font-size: 14px;
+                padding: 14px 30px;
+            }
+        }
+    }
+}

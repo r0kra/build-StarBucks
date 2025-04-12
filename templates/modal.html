@@ -1,7 +1,41 @@
-<div class="modal">
-    <h3>Process modal window</h3>
+<div id="process" class="modal video-procecess">
+    <button class="btn btn-close x-close" data-modal-close>x</button>
+    <div class="modal-content video-content">
+        <h3>Process modal window</h3>
+        <video id="video" src="/dev/assets/video/starbucks-coffee.mp4.mp4" controls></video>
+        <div class="player-controls">
+            <div class="d-flex g-3">
+                <button id="play" class="btn btn-player">
+                    <svg>
+                        <use href="#icon-triangl"></use>
+                    </svg>
+                </button>
+                <button id="pause" class="btn btn-player">
+                    <svg>
+                        <use href="#icon-pause"></use>
+                    </svg>
+                </button>
+                <button id="stop" class="btn btn-player">
+                    <svg>
+                        <use href="#icon-stop"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="d-flex g-3">
+                <h5 id="how-made" class="btn btn-player">How is made</h5>
+                <h5 id="roaster" class="btn btn-player">The roaster</h5>
+                <h5 id="taste" class="btn btn-player">Taste</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="feedback" class="modal">
+    <button class="btn btn-close x-close" data-modal-close>x</button>
     <div class="modal-content">
+        <h3>Feedback modal window</h3>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, eum asperiores quod recusandae itaque sint perspiciatis veniam molestiae facere, magni dolor sed nesciunt, expedita dolorem voluptates adipisci sequi numquam iure.
     </div>
-    <button class="btn btn-secondary"  data-modal="close" type="button">Close</button>
+    <button class="btn btn-close"  data-modal-close type="button">Close</button>
 </div>
+

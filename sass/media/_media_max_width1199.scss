@@ -1,0 +1,23 @@
+@media screen and (max-width: 1233.99px) {
+    .carousel-wrapper {
+        .swiper-product {
+            max-width: 579px;
+        }
+    }
+    .swiper-navigation {
+        max-width: 842px;
+    }
+}
+
+@media screen and (max-width: 1199.99px) {
+    .advantages-row{    
+        .accent-label-sm{
+            top:-60px;
+            left: 0px;
+        }
+    }
+
+    .footer-nav{
+        max-width: 650px;
+    }
+}
